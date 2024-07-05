@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/add_new_nodes.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">    
+    <title>MedicineGuide</title>
+
+</head>
+<body>
+{% include 'nav_bar.html' %}
+
+    
+    <div class="add_new_nodes">
+    <h1 id="main_text">Добавление новых представителей</h1>
+    <form class="add_form" role="add_new_nodes" method="post"  action="{% url 'add_new_nodes' %}">
+      {% csrf_token %}
+
+        <label for="selected_node_name">Выберите узел:</label>
+        <select class="separate_element" name="selected_node_name">
+            {% for node in all_nodes %}
+                <option value="{{ node }}">{{ node }}</option>
+            {% endfor %}
+        </select>
+        <label id='select_rel' for="selected_relationship">Выберите отношение:</label>
+        <select class="separate_element"  name="selected_relationship">
+        
+            <option value="BELONGS_TO">BELONGS_TO</option>
+            <option value="PART_OFF">PART_OFF</option>
+        </select> 
+      <input class="separate_element" type="text" placeholder="Название" id="name" name="name">
+      <input class="separate_element" type="text" placeholder="Определение" id="text" name="text">
+      <input class="separate_element" type="text" placeholder="Царство" id="kingdom" name="kingdom">
+      <input class="separate_element" type="text" placeholder="Отдел" id="part" name="part">
+      <input class="separate_element" type="text" placeholder="Тип" id="type" name="type">
+      <input class="separate_element" type="text" placeholder="Класс" id="class_node" name="class_node">
+      <input class="separate_element" type="text" placeholder="Отряд" id="trop" name="trop">
+      <input class="separate_element" type="text" placeholder="Порядок" id="order" name="order">
+      <input class="separate_element" type="text" placeholder="Семейство" id="family" name="family">
+      <input class="separate_element" type="text" placeholder="Род" id="genus" name="genus">
+      <input class="separate_element" type="text" placeholder="Вид" id="view" name="view">
+      <button id="add_button" type="submit">Добавить узел</button>  
+  </form>
+</div>
+    
+</body>
+</html>

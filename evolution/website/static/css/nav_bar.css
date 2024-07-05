@@ -1,0 +1,144 @@
+.background {
+    background: #E1C3A3;
+    width: 100%;
+    height: 200px;
+    color: #5D4848;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+#logo {
+    position:absolute; 
+    width: 120px;
+    height: 120px;
+    margin-top: -10px;
+    margin-left: -10px;
+   
+}
+
+/* #btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  } */
+
+.bar {
+    position: relative;
+    background: #E1C3A3;
+    width: 100%;
+    height: 45px;
+    justify-content: space-between;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+}
+ 
+
+
+#Cambria {
+    font-family: "Cambria", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    margin-top: -30px;
+}
+
+
+#ubuntu {
+    font-family: "Cambria", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.search_field {
+    width: 300px;
+    height: 40px;
+    margin: 25px 160px 41px 0;
+    border-radius: 15px;
+    border: none;
+    padding-left: 40px; /* Добавить отступ слева для значка */
+    background-color: #fff; /* Задаем фоновый цвет поля */
+    background-image: url('search.png'); /* Путь к изображению значка */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Позиционирование значка */
+    background-size: 25px;
+    outline: none;
+
+}
+
+.search_field:focus {
+    outline: none; /* Убираем черную границу при фокусе */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Добавляем легкий эффект тени */
+}
+
+.btn {
+    
+    width: 140px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #E1C3A3;
+    border: #5D4848 1px solid;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Cambria", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bold;
+
+  }
+  .btn a {
+    text-decoration: none;
+    color: #5D4848;
+  }
+
+  #add {
+    top:20px;
+    right: 10px;
+    position: absolute; 
+  }
+
+  .calculator {
+    top:35px;
+    right: 20px;
+    position: absolute; 
+  }
+
+  
+
+
+
+
+#calc_1 a, #calc_2 a, #calc_3 a {
+    text-decoration: none;
+    color: #000;
+   
+  }
+
+
+
+
+
+
+
+
+
+
+
+
